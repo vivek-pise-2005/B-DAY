@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Story</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+
+<canvas id="bg-particles"></canvas>
+<canvas id="confetti-canvas"></canvas>
+
+<!-- ============ INTRO ============ -->
+<section id="intro">
+  <div class="intro-kicker" id="intro-kicker">a little something, made for you</div>
+  <div class="intro-lines">
+    <p id="intro-line1"></p>
+    <p id="intro-line2"></p>
+  </div>
+  <h1 id="her-name-reveal"></h1>
+  <button id="enter-btn">Tap to begin our story</button>
+</section>
+
+<main id="main-content">
+
+  <!-- ============ COUNTDOWN (gate) ============ -->
+  <section class="scene" id="countdown-scene">
+    <div class="scene-label reveal">her birthday</div>
+    <div class="countdown-grid">
+      <div class="countdown-unit reveal"><div class="countdown-num" id="cd-days">00</div><div class="countdown-word">days</div></div>
+      <div class="countdown-unit reveal"><div class="countdown-num" id="cd-hours">00</div><div class="countdown-word">hours</div></div>
+      <div class="countdown-unit reveal"><div class="countdown-num" id="cd-mins">00</div><div class="countdown-word">minutes</div></div>
+      <div class="countdown-unit reveal"><div class="countdown-num" id="cd-secs">00</div><div class="countdown-word">seconds</div></div>
+    </div>
+    <p class="countdown-footer reveal">The day the world became a little more beautiful.</p>
+    <div class="finale-message">
+      <h2 id="finale-headline"></h2>
+      <p id="finale-sub"></p>
+      <p class="countdown-scroll-hint" id="countdown-scroll-hint">Scroll down ↓</p>
+    </div>
+  </section>
+
+  <!-- Everything below stays hidden until the countdown reaches zero -->
+  <div id="locked-content">
+
+  <!-- ============ HERO PHOTO ============ -->
+  <section class="scene" id="hero-photo-scene">
+    <div class="scene-label reveal">happy birthday</div>
+    <h2 class="scene-title reveal" id="hero-photo-title">Today is all about you, Meku.</h2>
+    <img class="hero-photo reveal" id="hero-photo-img" src="" alt="">
+  </section>
+
+  <!-- ============ GALLERY ============ -->
+  <section class="scene" id="gallery-scene">
+    <div class="scene-label reveal">a few favorites</div>
+    <h2 class="scene-title reveal">Moments of you.</h2>
+    <p class="scene-sub reveal">Click any photo to see it properly.</p>
+    <div class="gallery-grid" id="gallery-grid"></div>
+    <div class="keepsake-strip" id="keepsake-strip"></div>
+  </section>
+
+  <!-- ============ BIRTHDAY LETTER ============ -->
+  <section class="scene" id="letter-scene">
+    <div class="scene-label reveal">written especially for you</div>
+    <h2 class="scene-title reveal">A letter for your birthday.</h2>
+    <div class="envelope-wrap reveal" id="envelope-wrap">
+      <div class="envelope"></div>
+      <div class="envelope-hint">tap to open</div>
+    </div>
+    <div class="letter-paper" id="letter-paper">
+      <p id="letter-text"></p>
+    </div>
+  </section>
+
+  <!-- ============ REASONS ============ -->
+  <section class="scene" id="reasons-scene">
+    <div class="scene-label reveal">reasons</div>
+    <h2 class="scene-title reveal">A few reasons you're amazing.</h2>
+    <p class="scene-sub reveal">Click a card to flip it.</p>
+    <div class="reasons-grid" id="reasons-grid"></div>
+  </section>
+
+  <!-- ============ SECRET ============ -->
+  <section class="scene" id="secret-scene">
+    <div class="scene-label reveal">secret message</div>
+    <h2 class="scene-title reveal" style="margin-left:auto;margin-right:auto;">A secret, just for you.</h2>
+    <div class="secret-lock reveal">
+      <p class="secret-hint" id="secret-hint-text"></p>
+      <form class="secret-form" id="secret-form">
+        <input type="text" id="secret-input" placeholder="enter the word" autocomplete="off">
+        <button type="submit">Unlock</button>
+      </form>
+      <div class="secret-error" id="secret-error"></div>
+    </div>
+    <div class="secret-unlocked" id="secret-unlocked">
+      <p id="secret-message-text"></p>
+    </div>
+  </section>
+
+  <!-- ============ WISHES ============ -->
+  <section class="scene" id="future-scene">
+    <div class="scene-label reveal">wishes for you</div>
+    <h2 class="scene-title reveal">What I'm hoping for you this year.</h2>
+    <p class="scene-sub reveal">Tap the ones you want most.</p>
+    <ul class="future-list" id="future-list"></ul>
+  </section>
+
+  <!-- ============ FINALE ============ -->
+  <section class="scene" id="finale-scene">
+    <div class="scene-label reveal">before you go</div>
+    <h2 class="scene-title reveal" style="margin:0 auto;">Happy birthday, to the fullest.</h2>
+    <h1 class="finale-name reveal" id="finale-name"></h1>
+    <button id="finale-btn" class="reveal" style="background:transparent;border:1px solid var(--gold);color:var(--ivory);padding:16px 40px;font-size:0.85rem;letter-spacing:0.15em;border-radius:999px;">Happy Birthday ❤</button>
+    <p class="finale-final-line reveal">here's to today, and every year after.</p>
+  </section>
+
+  </div><!-- /locked-content -->
+
+  <footer>made with love, for {{name}}</footer>
+
+</main>
+
+<!-- ============ LIGHTBOX ============ -->
+<div id="lightbox">
+  <button id="lightbox-close">&times;</button>
+  <figure>
+    <img id="lightbox-img" src="" alt="">
+    <figcaption id="lightbox-caption"></figcaption>
+  </figure>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
