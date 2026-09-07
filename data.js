@@ -59,7 +59,7 @@ Whatever today looks like, I just want you to know: you're loved, exactly as you
 
 Happy birthday, Meku.
 
-— [Your name]`,
+— Your Viku 😏❤️`,
 
   // ---- Reasons you're amazing ----
   // Write these about HER — her personality, her qualities. Add as many as you want.
