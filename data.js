@@ -49,7 +49,7 @@ const STORY = {
   // Edit this fully — write it in your own words. This is a starting point.
   loveLetter: `My Meku,
 
-Happy birthday.
+Happy birthday 🎂
 
 I wanted today to feel different from every other day — because you deserve a day that's entirely, unapologetically yours. Not a day you spend looking after everyone else, but one where people look after you for a change.
 
@@ -57,7 +57,7 @@ I hope this year gives you everything you've been quietly hoping for. I hope it'
 
 Whatever today looks like, I just want you to know: you're loved, exactly as you are.
 
-Happy birthday, Meku.
+Happy birthday, Meku ❤️.
 
 — Your Viku 😏❤️`,
 
@@ -83,7 +83,9 @@ Happy birthday, Meku.
 
 This one's just for you — a little extra birthday message, tucked away where only you would think to look.
 
-Here's to a year that treats you as well as you treat everyone around you. Happy birthday. 🎂`,
+Here's to a year that treats you as well as you treat everyone around you.
+
+ " Happy birthday Bayko and I Love You So Much  🎂"`,
 
   // ---- Wishes for her year ahead ----
   futureList: [
